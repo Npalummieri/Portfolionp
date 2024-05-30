@@ -407,6 +407,7 @@ function buttonEffect(btn)
             // idsSlideComm.forEach(commId => {
 
             // });
+            //
 
         }
 
