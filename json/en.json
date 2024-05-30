@@ -1,0 +1,60 @@
+{
+    "navmain":{
+        "proj":"Projects",
+        "tools":"Tools",
+        "boutme":"About me"
+    },
+
+    "mainSection":{
+            "welcome":"Welcome visitor!",
+            "projTag":"PROJECTS",
+            "name":"<strong>Name :</strong> Nicolás",
+            "lastname":"<strong>Lastname :</strong> Palummieri",
+            "age":"<strong>Age :</strong> 25",
+            "birth":"<strong>Birth :</strong> 09/10/1998",
+            "pwelcome":"¡Welcome! You've clicked on the main folder of my projects, you can access them from here or from their respective folder. Thanks for your time!",
+            "pheroIntro":"Website where people offer pet care services. It's an intermediary system managed through bookings for service control and fulfillment. <br> Tools: PHP, MySQL, HTML, CSS.",
+            "titlemainfol":"Main folder",
+            "clickhere":"Click here for more details",
+            "moreinfo": "¡Click here for more details!",
+            "titleph": "Project -Pet Hero-",
+            "javaProIntro": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus optio alias, vel accusamus minus praesentium rem! Blanditiis quibusdam exercitationem in nostrum, excepturi ea voluptate et quo, sint praesentium quia debitis.",
+            "jsProIntro": "asdnkasjdnkjasndjkasndknasndkjasndjkasndasjndkj akdjsnasjkdnkja sndkjasnjkasns nkjsdn kajsdn knasjdkn",
+            "zeroComm":"Web page dedicated to the hiring of pet care, with registration of users by roles where each one plays a defined role, having KEEPERS and OWNERS as protagonists of the same. Right now you are looking at the main page that you will find when you enter the web. You see small profiles of each caregiver with a series of characteristics from there the user has different ways to interact with the site.",
+            "firstComm":"View of the pet list while logged in as the owner. The website makes it possible to visualize in detail the availability and care characteristics of the pet. The owner can write a review with a score to measure the reputation of the pet sitter for future 'clients'.",
+            "secComm":"Pets of the owner logged, you have the option to edit their data and delete it as appropriate, and you can also manage file uploads for images and videos of the pet (vaccination schedule and profile picture, for example).",
+            "thiComm":"Login page for any type of user, with password reset by mail in case of forgotten/lost password.",
+            "fouComm":"Reservation view,to be made with specific dates and the display of a list of own pets that match the caregiver's profile.",
+            "fifComm":"Chat between users with a confirmed reservation for better communication.",
+            "proj2":"Project -2-",
+            "proj3":"Project -3-",
+            "paraProj2":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "paraProj3":"333333333333333333333 nue"
+    },
+    "resourcesSection":{
+        "tools":"Tools",
+        "phpArt":"PHP is a general-purpose, server-side interpreted programming language that is particularly well-suited for web development. It was an essential component of the degree used in the final project.",
+        "javaArt":"I have acquired expertise in this object-oriented programming language, which I developed during the middle phase of my degree program, with a particular focus on the object-oriented programming paradigm.",
+        "cArt":"Structured programming language, general-purpose. I learned about during the first part of the degree, it served as a foundation for understanding the fundamentals of different data types and their general handling.",
+        "jsArt":"This compiled object-oriented programming language is used as a tool for dynamic web management. It is also utilized, to a lesser extent, with one of its libraries, jQuery, which is a simplified version of the language but with the same objective of adding dynamism to the web (applied alongside with AJAX).",
+        "htmlArt":"This is a markup language for creating web pages. It serves as a standard for presenting content on our website. I have used it in every web project mentioned in this portfolio.",
+        "cssArt":"The graphic design language used to personalize the markup document (HTML) is a valuable asset in all web projects. It is used in conjunction with frameworks built upon it, such as Bootstrap and learning Tailwind CSS.",
+        "mysqlArt":"The relational database management system is the primary tool utilized by the project, 'PetHero'. This system enables the storage, organization, retrieval, and handling of data in terms of performance, security, and flexibility. It provides the capability to manage large volumes of data in a tidy manner.",
+        "gitArt":"Version control software used in all of my projects to maintain an accurate record of code versions. This software is highly efficient for monitoring file changes, including modifications, additions, and deletions, which are essential for project management."
+    },
+    "summarySection":{
+        "aboutme":"About me",
+        "mySum":"My name is Nicolás. I am passionate about programming and technology. I graduated from the National Technological University of Mar del Plata as a programmer, where I learned the fundamentals and principles of developing myself in the field of programming. Throughout the course, I encountered languages such as C, Java, PHP, as well as database usage and management, along with an introduction to standard project development methodologies. I understand the role of a programmer as an analyst and problem solver, as well as striving for optimization in solutions. My goal is to learn and grow as a professional in IT, while continuing to educate myself and learn independently on topics that interest me, such as backend development, data management, and cybersecurity.",
+        "contactme":"Contact me",
+        "emailLabel":"Email :",
+        "fullnameLabel":"Fullname :",
+        "subjectLabel":"Subject :",
+        "bodyLabel":"Message body :",
+        "submitForm":"Send message",
+        "contactbutton":"Contact"
+        },
+    "footerSection":{
+        "footertext":"All rights reserved 2024"
+        }    
+
+}

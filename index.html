@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio NP</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://kit.fontawesome.com/299e8b4808.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="contmainav" >
+        <nav id="main-nav">
+                <a href="#mainSection" data-section="navmain" data-value="proj">Proyectos</a>
+                <a href="#resourcesSection" data-section="navmain" data-value="tools">Herramientas</a>
+                <a href="#summarySection" data-section="navmain" data-value="boutme">Sobre mi</a>
+        </nav>
+    </div>
+    <div class="containersection main" id="mainSection">
+        
+
+        <div id="config">
+            <div id="gear"><i class="fa-solid fa-gear"></i></div>
+            <div id="navconfig">
+                <label class="switch">
+                    <input type="checkbox" id="inputTheme" checked> 
+                    <span class="slider"></span>
+                    <div class="theme"><i class="fa-solid fa-moon" id="moon"></i><i class="fa-regular fa-sun" id="sun"></i></div>
+                  </label>
+
+                <div class="font-selector">
+                    <div class="font-option" id="windowsreg" data-font="windowsreg" onclick="selectfont('windowsreg')" title="Windowsreg" style="font-family: windowsreg;">Fuente</div>
+                    <div class="font-option" id="monospace" data-font="monospace" onclick="selectfont('monospace')" title="Monospace" style="font-family: monospace;">Fuente</div>
+                    <div class="font-option" id="windowsdos" data-font="windowsdos" onclick="selectfont('windowsdos')" title="Windowsdos" style="font-family: windowsdos;">Fuente</div>
+                </div>
+                            <div class="language-selector">
+                                <div class="language-option" id="spanish" data-language ="es" onclick="selectLanguage('spanish')" title="español">ES</div>
+                                <div class="language-option" id="english" data-language ="en" onclick="selectLanguage('english')" title="english">EN</div>
+                                <div class="language-option" id="german"  data-language ="de" onclick="selectLanguage('german')" title="deutsch">DE</div>
+                            </div>
+                    
+                </div>
+            </div>
+        
+            <div id="wel">
+                    <h1><span class="typing" id="welcome" data-section="mainSection" data-value="welcome">¡Bienvenido visitante!</span></h1>
+            </div>
+        
+
+        <div class="folders-container">
+            <div class="folder fol0" id="project-0" data-modal="dmodalproj-0">
+                <div class="foldertag">
+                    <h3 data-section="mainSection" data-value="projTag">PROYECTOS</h3>
+                </div>
+                <div id="note">
+                    <a href="#summarySection">
+                        <hr>
+                        <p data-section="mainSection" data-value="name"><strong>Nombre:</strong> Nicolás</p>
+                        <hr>
+                        <p data-section="mainSection" data-value="lastname"><strong>Apellido :</strong> Palummieri</p>
+                        <hr>
+                        <p data-section="mainSection" data-value="age"><strong>Edad :</strong> 25</p>
+                        <hr>
+                        <p id="hiddenMore" data-section="mainSection" data-value="moreinfo"><strong>¡Clickea para más información!</strong></p>
+        
+                    </a>
+                </div>
+
+
+
+                <div id="modal-project-0" class="modal" data-modalcontentproj="0">
+                    <a class="prev">&#10094;</a>
+                    <div class="modal-content" id="modal-content-project0">
+                        <div class="window">
+                            <div class="title-bar">
+                                <div class="title" data-section="mainSection" data-value="titlemainfol">Carpeta principal</div>
+                                <div class="buttons">
+                                    <div class="minimize-button" id="minimize"><div class="fig minfig"></div></div>
+                                    <div class="maximize-button" id="maximize"><div class="fig maxfig"></div></div>
+                                    <div class="close-button" id="closebtnwin"><div class="fig clsfig"></div></div>
+                                </div>
+                            </div>
+        
+                            <div class="slide">
+        
+                                <ul>
+                                    <p id="intro" data-section="mainSection" data-value="pwelcome">¡Buenas! Haz clickeado en la
+                                        carpeta principal de mis proyectos,puedes acceder a
+                                        ellos
+                                        desde aqui o desde su correspondiente carpeta ¡Gracias!</p>
+                                    
+                                    <li>
+                                        <a href="#"
+                                            onclick="selectModalsFromFolderClicked(document.getElementById('project-1'))">Pet
+                                            Hero</a>: <p id="pheroIntro" data-section="mainSection" data-value="pheroIntro">
+                                            Pagina web donde personas ofrecen servicios de cuidado de mascotas.
+                                            Es un sistema intermediario gestionado a traves de reservas para el cumplimiento del
+                                            servicio. Herramientas : PHP,MySQL,HTML,CSS</p>
+                                        <a href="#"
+                                            onclick="selectModalsFromFolderClicked(document.getElementById('project-1'))"
+                                            data-section="mainSection" data-value="clickhere"><strong>¡Clickea
+                                                acá para más detalles!</strong> </a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a href="#"
+                                            onclick="selectModalsFromFolderClicked(document.getElementById('project-2'))">JavaProj</a>:
+                                        <p id="javaProIntro" data-section="mainSection" data-value="javaProIntro">Lorem ipsum
+                                            dolor sit amet consectetur adipisicing elit. Necessitatibus
+                                            optio alias, vel accusamus minus praesentium rem! Blanditiis quibusdam
+                                            exercitationem in nostrum, excepturi ea voluptate et quo, sint praesentium quia
+                                            debitis.</p>
+                                        <a href="#"
+                                            onclick="selectModalsFromFolderClicked(document.getElementById('project-2'))"
+                                            data-section="mainSection" data-value="clickhere"><strong>¡Clickea
+                                                acá para más detalles!</strong> </a>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <a href="#"
+                                            onclick="selectModalsFromFolderClicked(document.getElementById('project-3'))">JS</a>:
+                                        <p id="jsProIntro" data-section="mainSection" data-value="jsProIntro">Lorem ipsum dolor
+                                            sit amet consectetur adipisicing elit. Tempora officiis
+                                            blanditiis debitis velit iste impedit officia ipsum? Nihil explicabo officia at
+                                            incidunt, voluptatem deleniti velit placeat commodi autem molestiae illo?</p>
+                                        <a href="#"
+                                            onclick="selectModalsFromFolderClicked(document.getElementById('project-3'))"
+                                            data-section="mainSection" data-value="clickhere"><strong>¡Clickea
+                                                acá para más detalles!</strong> </a>
+                                    </li>
+                                </ul>
+        
+        
+                            </div>
+        
+                            
+                        </div>
+                    </div>
+                    <a class="next">&#10095;</a>
+                </div>
+            </div>
+
+
+            <div class="folder invert fol1" id="project-1" data-modal="dmodalproj-1">
+                <div class="foldertag invert">
+                    <h3>PET HERO</h3>
+                </div>
+                <div id="modal-project-1" class="modal" data-modalcontentproj="1">
+                    <a class="prev">&#10094;</a>
+                    <div class="modal-content">
+                        <div class="window">
+                            <div class="title-bar">
+                                <div class="title" data-section="mainSection" data-value="titleph">Proyecto -Pet Hero-</div>
+                                <div class="buttons">
+                                    <div class="minimize-button" id="minimize"><div class="fig minfig"></div></div>
+                                    <div class="maximize-button" id="maximize"><div class="fig maxfig"></div></div>
+                                    <div class="close-button" id="closebtnwin"><div class="fig clsfig"></div></div>
+                                </div>
+                            </div>
+
+                        
+                        <div class="slide" id="firstSlide">
+
+                            <img src="Resources/imgs/projPetHero/Mainpage.png" alt="">
+                            
+                        </div>
+                        <div class="slide" id="secondSlide">
+                            <img src="Resources/imgs/projPetHero/keeperInfo+Reviewpng.png" alt="Slide 2">
+                            <!-- <p class="commentSlide" >
+                                Pagina web dedicada a la contratacion de cuidado de mascotas,con registro de usuarios por roles donde cada uno desempeña un papel definido,teniendo CUIDADORES y DUEÑOS como protagonistas del mismo.
+                                Ahora mismo está observando la pagina principal que se encuentra al ingresar a la web. Se ven pequeños perfiles de cada cuidador con una serie de caracteristicas a partir de allí el usuario tiene distintas formas
+                                de interactuar con el sitio.
+                            </p> -->
+                        </div>
+                        <div class="slide" id="thirdSlide">
+                            <img src="Resources/imgs/projPetHero/petList.png" alt="Slide 3">
+                        </div>
+                        <div class="slide" id="fourthSlide">
+                            <img src="Resources/imgs/projPetHero/login.png" alt="Slide 4">
+                        </div>
+                        <div class="slide" id="fifthSlide">
+                            <img src="Resources/imgs/projPetHero/makebookingView.png" alt="Slide 5">
+                        </div>
+                        <div class="slide" id="sixthSlide">
+                            <img src="Resources/imgs/projPetHero/chatView.png" alt="Slide 6">
+                        </div>
+                    </div>
+                    
+                    <!-- Reemplazar p por article y cambiar a zero -->
+                    <p class="commentSlide" id="zeroComm" data-idcommSlide="0" data-section="mainSection" data-value="zeroComm">
+                        Pagina web dedicada a la contratacion de cuidado de mascotas,con registro de usuarios por roles donde cada uno desempeña un papel definido,teniendo CUIDADORES y DUEÑOS como protagonistas del mismo.
+                        Ahora mismo está observando la pagina principal que se encuentra al ingresar a la web. Se ven pequeños perfiles de cada cuidador con una serie de caracteristicas a partir de allí el usuario tiene distintas formas
+                        de interactuar con el sitio.
+                    </p>
+                    <p class="commentSlide" id="firstComm" data-idcommSlide="1" data-section="mainSection" data-value="firstComm">
+                        Vista del perfil de Cuidador estando conectado como dueño. La web posibilita visualizar a detalle la disponibilidad y caracteristicas de cuidado de la mascota.
+                        El dueño puede redactar una review con un puntaje para medir la reputación del cuidador y que sirve para futuros 'clientes'.
+                    </p>
+                    <p class="commentSlide" id="secComm" data-idcommSlide="2" data-section="mainSection" data-value="secComm">
+                        Mascotas del dueño conectado a la web.Tiene la posibilidad de editar sus datos y borrarlo según el caso.Tambien se manejan las subidas de archivo para las imagenes y videos de la mascota (plan de vacunacion y foto de perfil,por ejemplo).
+                    </p>
+                    <p class="commentSlide" id="thiComm" data-idcommSlide="3" data-section="mainSection" data-value="thiComm">
+                        Pagina de ingreso para cualquier tipo de usuario,con reestablecimiento de contraseña por mail en caso de olvido/perdida.
+                    </p>
+                    <p class="commentSlide" id="fouComm" data-idcommSlide="4" data-section="mainSection" data-value="fouComm">
+                        Vista de reserva a realizar con fechas especificas y el muestreo de un listado de las mascotas propias que coincidan con el perfil del cuidador.
+                    </p>
+                    <p class="commentSlide" id="fifComm" data-idcommSlide="5" data-section="mainSection" data-value="fifComm">
+                        Chat entre partes que confirmen una reserva para mejor comunicación. 
+                    </p>
+                </div>
+                <a class="next">&#10095;</a>
+            </div>
+
+            </div>
+            <div class="folder invert fol2" id="project-2">
+                <div class="foldertag invert">
+                    <h3>2</h3>
+                    <div id="modal-project-2" class="modal" data-modalcontentproj="2" >
+                        <a class="prev">&#10094;</a>
+                        <div class="modal-content">
+                            <div class="window">
+                                <div class="title-bar">
+                                    <div class="title" data-section="mainSection" data-value="proj2">Proyecto -2-</div>
+                                    <div class="buttons">
+                                        <div class="minimize-button" id="minimize"><div class="fig minfig"></div></div>
+                                        <div class="maximize-button" id="maximize"><div class="fig maxfig"></div></div>
+                                        <div class="close-button" id="closebtnwin"><div class="fig clsfig"></div></div>
+                                    </div>
+                                </div>
+                            <div class="slide">
+                                <p id="paraProj2" data-section="mainSection" data-value="paraProj2">asdasasdasdasddasdasddasdasddasdasddasdasddasdasdasdasdasdd</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <a class="next">&#10095;</a>
+                        
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="folder invert fol3" id="project-3">
+                <div class="foldertag invert">
+                    <h3>3</h3>
+                    <div id="modal-project-3" class="modal" data-modalcontentproj0="3">
+                        <a class="prev">&#10094;</a>
+                        <div class="modal-content">
+                            <div class="window">
+                                <div class="title-bar">
+                                    <div class="title" data-section="mainSection" data-value="proj3">Proyecto -3-</div>
+                                    <div class="buttons">
+                                        <div class="minimize-button" id="minimize"><div class="fig minfig"></div></div>
+                                        <div class="maximize-button" id="maximize"><div class="fig maxfig"></div></div>
+                                        <div class="close-button" id="closebtnwin"><div class="fig clsfig"></div></div>
+                                    </div>
+                                </div>
+                            <div class="slide">
+                                <p id="paraProj3" data-section="mainSection" data-value="paraProj3">333333333333333333333333333333333333333333</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <a class="next">&#10095;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="shadowFolder"> &nbsp;</div>
+
+    </div>
+    <div class="containersection resources" id="resourcesSection">
+        <!-- H3 tiene un margin propio del tag de 1em por esos 'rompe' lo que pretendo -->
+        <span class="sectionTitle" id="tools" data-section="resourcesSection" data-value="tools">Herramientas</span>
+        <div class="window" style="width: 100%; height: 80%;">
+            <div class="title-bar">
+                <div class="title" data-section="resourcesSection" data-value="tools">Herramientas</div>
+                <div class="buttons">
+                    <div class="minimize-button" id="minimize"><div class="fig minfig"></div></div>
+                    <div class="maximize-button" id="maximize"><div class="fig maxfig"></div></div>
+                    <div class="close-button" id="closebtnwin"><div class="fig clsfig"></div></div>
+                </div>
+            </div>
+        <div id="contCurrent" style="margin: 0 auto;">
+    <div class="arrow-leftcont">
+        <button id="arrow-left">
+            <div class="arrow left"></div>
+        </button>
+    </div>
+    <div class="currentList">
+        <div class="itemList">
+            <div class="box-icon" id="php">
+                <div class="iconlink"><img src="../Resources/imgs/logopixelphp.png" alt="php" class="icon-img"></a><p>PHP</p>
+                </div>
+            </div>
+            <div class="card" id="phpInfo">
+                <article id="phpArt" data-section="resourcesSection" data-value="phpArt">PHP es un lenguaje de
+                    programación interpretado del lado del servidor y de uso general que se adapta especialmente al
+                    desarrollo web Formó parte del temario para la finalización de la carrera y empleado en el proyecto
+                    final de la misma.
+                </article>
+            </div>
+        </div>
+        <div class="itemList">
+            <div class="box-icon" id="java">
+                <div class="iconlink"><img src="../Resources/imgs/logopixeljava2.png" alt="java" class="icon-img"><p>JAVA</p></div>
+            </div>
+            <div class="card" id="javaInfo">
+                <article id="javaArt" data-section="resourcesSection" data-value="javaArt">Lenguaje de programación
+                    orientado a objetos.
+                    Aprendido durante la fase media de la carrera con enfoque en el paradigma de la programación
+                    orientada a objetos</article>
+            </div>
+        </div>
+
+        <div class="itemList">
+            <div class="box-icon" id="c">
+                <div class="iconlink"><img src="../Resources/imgs/iconpixelc.png" alt="c" class="icon-img"><p>C</p></div>
+            </div>
+            <div class="card" id="cInfo">
+                <article id="cArt" data-section="resourcesSection" data-value="cArt">Lenguaje de programación
+                    estructurado,de objetivo general.Aplicado durante la primera parte de la carrera sirvió como base
+                    para entender los fundamentos
+                    de los distintos tipos de datos y su manejo de forma general.
+                </article>
+            </div>
+        </div>
+
+        <div class="itemList">
+            <div class="box-icon" id="js">
+                <div class="iconlink"><img src="../Resources/imgs/logopixeljs.png" alt="js" class="icon-img"><p>JavaScript</p></div>
+            </div>
+            <div class="card" id="jsInfo">
+                <article id="jsArt" data-section="resourcesSection" data-value="jsArt">Lenguaje de programación
+                    compilado orientado a objetos.Utilizado como herramienta para el manejo dinámico de la web,
+                    tambien se usó en menor medida unos de sus más famosas librerias Jquery,una versión simplificada
+                    pero con el mismo objetivo de darle dinamismo a la web (aplicado junto con AJAX).
+                </article>
+            </div>
+        </div>
+
+
+
+        <div class="itemList">
+            <div class="box-icon" id="html">
+                <div class="iconlink"><img src="../Resources/imgs/logopixelhtml.png" alt="html"
+                        class="icon-img"><p>HTML</p></div>
+            </div>
+            <div class="card" id="htmlInfo">
+                <article id="htmlArt" data-section="resourcesSection" data-value="htmlArt">Lenguaje de marcado para la
+                    creación de paginas web.Sirve como estandar
+                    para la presentacion contenido en nuestra web.Lo utilicé en todo proyecto web mencionado en este
+                    portfolio.
+                </article>
+            </div>
+        </div>
+
+
+        <div class="itemList">
+            <div class="box-icon" id="css">
+                <div class="iconlink"><img src="../Resources/imgs/logopixelcss.png" alt="css"
+                        class="icon-img"><p>CSS</p></div>
+            </div>
+            <div class="card" id="cssInfo">
+                <article id="cssArt" data-section="resourcesSection" data-value="cssArt">Lenguaje de diseño grafico para
+                    darle una forma y estilo personalizado al documento de marcado (HTML).
+                    Utilizado en todos los proyectos web que he hecho junto con frameworks que utilizan de base a este
+                    (Bootstrap y aprendiendo Tailwindcss)</article>
+            </div>
+        </div>
+
+
+        <div class="itemList">
+            <div class="box-icon" id="mysql">
+                <div class="iconlink"><img src="../Resources/imgs/logopixelsql.png"
+                        alt="mysql" class="icon-img"><p>MySQL</p></div>
+            </div>
+            <div class="card" id="mysqlInfo">
+                <article id="mysqlArt" data-section="resourcesSection" data-value="mysqlArt">Sistema gestor de base de
+                    datos relacional.Es la base del proyecto llamado "PetHero".
+                    Este sistema permite almacenar,organizar y recuperar datos tambien su tratado en terminos de
+                    rendimiento,seguridad y flexibilidad
+                    por ende posibilita el manejo de grande volumenes de los mismos de forma prolija.
+                </article>
+            </div>
+        </div>
+
+        
+        <div class="itemList">
+            <div class="box-icon" id="git">
+                <div class="iconlink"><img src="../Resources/imgs/logopixelgit.png" alt="git" class="icon-img">
+                    <p>GIT</p>
+                </div>
+            </div>
+            <div class="card" id="gitInfo">
+                <article id="gitArt" data-section="resourcesSection" data-value="gitArt">Software de versionado utilizado en
+                    practicamente todos mis proyectos
+                    para llevar un registro de versiones del codigo. Muy eficiente para
+                    seguimiento de los archivos ,modificaciones
+                    ,agregacion y borrado involucrados en el trabajo.
+                </article>
+            </div>
+        </div>
+        
+        <div class="modalcard">
+            <div class="modalcard-content">
+            <button class="closebtn">
+                X
+            </button>
+            <div class="modal-text"></div>
+        </div>
+        </div>
+    </div>
+    <div class="arrow-rightcont">
+        <button id="arrow-right">
+            <div class="arrow right"></div>
+        </button>
+    </div>
+</div>
+</div>
+</div>
+
+    <div class="containersection summary" id="summarySection">
+        <span class="sectionTitle" id="boutme" data-section="summarySection" data-value="aboutme">Sobre mi</span>
+        <div class="contSumm">
+            <div class="innerSumm">
+                <span class="" id="mySum" style="display: none;" data-section="summarySection" data-value="mySum">
+Mi nombre es Nicolás.Apasionado por la programación y tecnología.Recibido como programador en la Universidad Tecnologica Nacional de Mar del Plata donde aprendí fundamentos y principios para desarrollarme en el area de la programación. En el transcurso del mismo estudié lenguajes como C,Java,PHP,tambien uso y manejo de  base de datos asimismo un acercamiento a la metodologia estandar del desarrollo de un proyecto. Comprender el rol de programador como analista y solucionador de problemas asi como la busqueda en la optimización de las soluciones. Busco aprender y formarme como profesional en IT,mientras sigo capacitandome y aprendiendo de forma autodidacta en temas que me resulten interesantes como ; Backend ,manejo de datos y seguridad informatica.
+</span>
+            </div>
+            <span id="charSpan" class="typewriting">
+                
+            </span>  
+        </div>
+        
+        <div class="modal contact" id="modalContact">
+            <div class="modal-content">
+            <div class="window">
+                <div class="title-bar">
+                    <div class="title">Formulario de contacto</div>
+                    <div class="buttons">
+                        <div class="minimize-button" id="minimize"><div class="fig minfig"></div></div>
+                        <div class="maximize-button" id="maximize"><div class="fig maxfig"></div></div>
+                        <div class="close-button" id="closebtnwin"><div class="fig clsfig"></div></div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="contactSection">
+                        <div class="contactForm">
+                            <form action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="a0e88ce3-6a4e-4fee-946b-fb4d4ac1f22f">
+                                <div class="contactdiv">
+                                    <label for="email" id="emailLabel" data-section="summarySection" data-value="emailLabel"
+                                        required>Email
+                                        : </label>
+                                    <input type="email" name="email" id="email">
+                                </div>
+            
+                                <div class="contactdiv">
+                                    <label for="number" id="numberLabel" data-section="summarySection"
+                                        data-value="numberLabel">Telefono :
+                                    </label>
+                                    <input type="number" name="number" id="number">
+                                </div>
+            
+                                <div class="contactdiv">
+                                    <label for="fullname" id="fullnameLabel" data-section="summarySection"
+                                        data-value="fullnameLabel" required>Nombre completo : </label>
+                                    <input type="text" name="fullname" id="fullname">
+            
+                                </div>
+            
+                                <div class="contactdiv">
+                                    <label for="subject" id="subjectLabel" data-section="summarySection"
+                                        data-value="subjectLabel">Asunto :
+                                    </label>
+                                    <input type="text" name="subject" id="subject">
+                                </div>
+                                <div class="contactdiv">
+                                    <label for="body" id="bodyLabel" data-section="summarySection" data-value="bodyLabel"
+                                        required>Mensaje:
+                                    </label>
+                                    <textarea type="text" name="body" id="body" cols="10" rows="20"></textarea>
+                                </div>
+                                <button type="submit" id="submitForm" title="enviar mensaje" data-section="summarySection"
+                                    data-value="submitForm">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+            <div class="divContact">
+                <button id="contactme" data-section="summarySection" data-value="contactbutton">Contacto</button>
+            </div>
+        
+        </div>
+
+
+<div id="cloned"></div>
+</body>
+<footer id="footer">
+    <div class="msgeFooter" data-section="footerSection" data-value="footertext">Todos los derechos reservados 2024</div>
+    <div class="social">
+        <a href="https://github.com/Npalummieri" target="_blank"><img src="Resources/imgs/25231.png" alt="gitlogo"></a>
+        <a href=""><img src="Resources/imgs/kedin.png" alt="kedin"></a>
+        <a href="mailto:palummnico@gmail.com"><img src="Resources/imgs/email.png" alt="email"></a>
+        <a href=""><img src="Resources/imgs/cellph.png" alt="cell"></a>
+    </div>
+</footer>
+<script src="scripts.js">dispAndCloseModal();</script>
+<script src=""></script>
+</html>

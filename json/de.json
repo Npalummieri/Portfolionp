@@ -1,0 +1,60 @@
+{
+    "navmain":{
+        "proj":"Projekte",
+        "tools":"Werkzeuge",
+        "boutme":"Über mich"
+    },
+
+    "mainSection":{
+            "welcome":"Herzlich willkommen!",
+            "projTag":"PROJEKTE",
+            "name":"<strong>Name :</strong> Nicolás",
+            "lastname":"<strong>Nachname :</strong> Palummieri",
+            "age":"<strong>Alter :</strong> 25",
+            "birth":"<strong>Geburt :</strong> 09/10/1998",
+            "pwelcome":"¡Willkommen! Sie haben auf den Hauptordner meiner Projekte geklickt, Sie können sie von hier aus oder von ihrem jeweiligen Ordner aus aufrufen. Vielen Dank !",
+            "pheroIntro":"Website, auf der Menschen Dienstleistungen für Haustiere anbieten. Es handelt sich um ein Vermittlungssystem, das über Buchungen für die Kontrolle und Erfüllung von Dienstleistungen verwaltet wird. Werkzeuge: <br>PHP, MySQL, HTML, CSS.",
+            "titlemainfol":"Haupt-Ordner",
+            "clickhere":"Klicken Sie hier für weitere Details",
+            "moreinfo": "Klicken Sie hier für weitere Details!",
+            "titleph": "Projekt -Pet Hero-",
+            "javaProIntro": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus optio alias, vel accusamus minus praesentium rem! Blanditiis quibusdam exercitationem in nostrum, excepturi ea voluptate et quo, sint praesentium quia debitis.",
+            "jsProIntro": "asdnkasjdnkjasndjkasndknasndkjasndjkasndasjndkj akdjsnasjkdnkja sndkjasnjkasns nkjsdn kajsdn knasjdkn",
+            "zeroComm":"first come aksdjnaskjd slide kasjdnjksadnkajsndkasdnjd asjdnkasjdnas d",
+            "firstComm":"Ansicht der Haustierliste, wenn man als Besitzer eingeloggt ist. Die Website ermöglicht es, die Verfügbarkeit und die Pflegeeigenschaften des Haustiers im Detail zu visualisieren. Der Besitzer kann eine Bewertung mit einer Punktzahl schreiben, um den Ruf des Tierhalters für zukünftige „Kunden“ zu messen.",
+            "secComm":"Haustiere des Besitzers angemeldet sind, haben Sie die Möglichkeit, ihre Daten zu bearbeiten und gegebenenfalls zu löschen, und Sie können auch Datei-Uploads für Bilder und Videos des Haustieres (z. B. Impfplan und Profilbild) verwalten.",
+            "thiComm":"Anmeldeseite für jede Art von Benutzer, mit Passwort-Reset per E-Mail im Falle eines vergessenen/verlorenen Passworts.",
+            "fouComm":"Reservierungsansicht, die mit bestimmten Daten und der Anzeige einer Liste von eigenen Haustieren, die dem Profil des Betreuers entsprechen, erstellt werden kann.",
+            "fifComm":"Chat zwischen Benutzern mit einer bestätigten Reservierung zur besseren Kommunikation.",
+            "proj2":"Projekt -2-",
+            "proj3":"Projekt -3-",
+            "paraProj2":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "paraProj3":"333333333333333333333 nue"
+    },
+    "resourcesSection":{
+        "tools":"Werkzeuge",
+        "phpArt":"PHP ist eine universell einsetzbare, serverseitig interpretierte Programmiersprache, die sich besonders gut für die Webentwicklung eignet. Sie war ein wesentlicher Bestandteil des Abschlusses, der im Rahmen des Abschlussprojekts verwendet wurde.",
+        "javaArt":"Ich habe mir in dieser objektorientierten Programmiersprache, die ich in der mittleren Phase meines Studiums entwickelt habe, Fachwissen angeeignet, wobei ich mich besonders auf das objektorientierte Programmierparadigma konzentriert habe.",
+        "cArt":"Strukturierte Programmiersprache, universell einsetzbar. Die Sprache, die ich während des ersten Teils des Studiums kennengelernt habe, diente als Grundlage für das Verständnis der Grundlagen verschiedener Datentypen und ihrer allgemeinen Handhabung.",
+        "jsArt":"Diese kompilierte objektorientierte Programmiersprache wird als Werkzeug für die dynamische Webverwaltung verwendet. In geringerem Maße wird sie auch mit einer ihrer Bibliotheken, jQuery, verwendet, die eine vereinfachte Version der Sprache ist, aber dasselbe Ziel verfolgt, nämlich das Web dynamischer zu gestalten (zusammen mit AJAX).",
+        "htmlArt":"Dies ist eine Auszeichnungssprache zur Erstellung von Webseiten. Sie dient als Standard für die Darstellung von Inhalten auf unserer Website. Ich habe sie in jedem in diesem Portfolio erwähnten Webprojekt verwendet.",
+        "cssArt":"Die grafische Designsprache, die zur Personalisierung des Auszeichnungsdokuments (HTML) verwendet wird, ist ein wertvolles Gut in allen Webprojekten. Sie wird in Verbindung mit darauf aufbauenden Frameworks wie Bootstrap und dem Erlernen von Tailwind CSS verwendet.",
+        "mysqlArt":"Das relationale Datenbank-Managementsystem ist das primäre Werkzeug, das bei dem Projekt „PetHero“ zum Einsatz kommt. Dieses System ermöglicht die Speicherung, Organisation, den Abruf und die Handhabung von Daten in Bezug auf Leistung, Sicherheit und Flexibilität. Es bietet die Möglichkeit, große Datenmengen in einer ordentlichen Weise zu verwalten.",
+        "gitArt":"Versionskontrollsoftware, die in allen meinen Projekten verwendet wird, um eine genaue Aufzeichnung der Codeversionen zu führen. Diese Software ist äußerst effizient bei der Überwachung von Dateiänderungen, einschließlich Änderungen, Hinzufügungen und Löschungen, die für das Projektmanagement unerlässlich sind."
+    },
+    "summarySection":{
+        "aboutme":"Über mich",
+        "mySum":"Mein Name ist Nicolás. Meine Leidenschaft gilt dem Programmieren und der Technologie. Ich habe an der Nationalen Technologischen Universität von Mar del Plata eine Ausbildung zum Programmierer absolviert, wo ich die Grundlagen und Prinzipien der Entwicklung im Bereich der Programmierung erlernt habe. Im Laufe des Kurses lernte ich Sprachen wie C, Java und PHP sowie die Nutzung und Verwaltung von Datenbanken kennen und erhielt eine Einführung in die Standardmethoden der Projektentwicklung. Ich verstehe die Rolle eines Programmierers als Analytiker und Problemlöser und strebe eine Optimierung der Lösungen an. Mein Ziel ist es, zu lernen und als IT-Fachmann zu wachsen, während ich mich weiterbilde und selbstständig zu Themen lerne, die mich interessieren, wie Backend-Entwicklung, Datenmanagement und Cybersicherheit.",
+        "contactme":"Kontakt",
+        "emailLabel":"E-mail :",
+        "fullnameLabel":"Voller Name :",
+        "subjectLabel":"Thema :",
+        "bodyLabel":"Nachrichtentext :",
+        "submitForm":"Nachricht senden",
+        "contactbutton":"Kontakt"
+        },
+    "footerSection":{
+        "footertext":"Alle Rechte vorbehalten 2024"
+        }    
+
+}

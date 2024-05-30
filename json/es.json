@@ -1,0 +1,58 @@
+{
+    "navmain":{
+        "proj":"Proyectos",
+        "tools":"Herramientas",
+        "boutme":"Sobre mi"
+    },
+
+    "mainSection":{
+            "welcome":"Bienvenido visitante",
+            "projTag":"PROYECTOS",
+            "name":"<strong>Nombre</strong> : Nicolás",
+            "lastname":"<strong>Apellido : </strong>Palummieri",
+            "age":"<strong>Edad :</strong> 25",
+            "birth":"<strong>Nacimiento :</strong> 09/10/1998",
+            "pwelcome":"¡Buenas! Haz clickeado en la carpeta principal de mis proyectos,puedes acceder a ellos desde aqui o desde su correspondiente carpeta ¡Gracias por tomarte el tiempo!",
+            "pheroIntro":"Pagina web donde personas ofrecen servicios de cuidado de mascotas. Es un sistema intermediario gestionado a traves de reservas para el cumplimiento del servicio. Herramientas : PHP,MySQL,HTML,CSS",
+            "clickhere":"Click here for more details",
+            "titlemainfol":"Carpeta principal",
+            "moreinfo": "¡Clickea acá para mas detalles!",
+            "titleph": "Proyecto -Pet Hero-",
+            "javaProIntro": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus optio alias, vel accusamus minus praesentium rem! Blanditiis quibusdam exercitationem in nostrum, excepturi ea voluptate et quo, sint praesentium quia debitis.",
+            "jsProIntro": "asdnkasjdnkjasndjkasndknasndkjasndjkasndasjndkj akdjsnasjkdnkja sndkjasnjkasns nkjsdn kajsdn knasjdkn",
+            "zeroComm":"Pagina web dedicada a la contratacion de cuidado de mascotas,con registro de usuarios por roles donde cada uno desempeña un papel definido,teniendo CUIDADORES y DUEÑOS como protagonistas del mismo. Ahora mismo está observando la pagina principal que se encuentra al ingresar a la web. Se ven pequeños perfiles de cada cuidador con una serie de caracteristicas a partir de allí el usuario tiene distintas formas de interactuar con el sitio.",
+            "firstComm":"Vista del perfil de Cuidador estando conectado como dueño. La web posibilita visualizar a detalle la disponibilidad y caracteristicas de cuidado de la mascota. El dueño puede redactar una review con un puntaje para medir la reputación del cuidador y que sirve para futuros 'clientes'.",
+            "secComm":"Mascotas del dueño conectado a la web.Tiene la posibilidad de editar sus datos y borrarlo según el caso.Tambien se manejan las subidas de archivo para las imagenes y videos de la mascota (plan de vacunacion y foto de perfil,por ejemplo).",
+            "thiComm":"Pagina de ingreso para cualquier tipo de usuario,con reestablecimiento de contraseña por mail en caso de olvido/perdida.",
+            "fouComm":"Vista de reserva a realizar con fechas especificas y el muestreo de un listado de las mascotas propias que coincidan con el perfil del cuidador.",
+            "fifComm":"Chat entre partes que confirmen una reserva para mejor comunicación.",
+            "proj2":"Proyecto -2-",
+            "proj3":"Proyecto -3-",
+            "paraProj2":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "paraProj3":"333333333333333333333 nue"
+    },
+    "resourcesSection":{
+        "tools":"Herramientas",
+        "phpArt":"PHP es un lenguaje de programación interpretado del lado del servidor y de uso general que se adapta especialmente al desarrollo web Formó parte del temario para la finalización de la carrera y empleado en el proyecto final de la misma.",
+        "javaArt":"Lenguaje de programación orientado a objetos.Aprendido durante la fase media de la carrera con enfoque en el paradigma de la programación orientada a objetos",
+        "cArt":"Lenguaje de programación estructurado,de objetivo general.Aplicado durante la primera parte de la carrera sirvió como base para entender los fundamentos de los distintos tipos de datos y su manejo de forma general.",
+        "jsArt":"Lenguaje de programación compilado orientado a objetos.Utilizado como herramienta para el manejo dinámico de la web, tambien se usó en menor medida unos de sus más famosas librerias Jquery,una versión simplificada pero con el mismo objetivo de darle dinamismo a la web (aplicado junto con AJAX).",
+        "htmlArt":"Lenguaje de marcado para la creación de paginas web.Sirve como estandar para la presentacion contenido en nuestra web.Lo utilicé en todo proyecto web mencionado en este portfolio.",
+        "cssArt":"Lenguaje de diseño grafico para darle una forma y estilo personalizado al documento de marcado (HTML). Utilizado en todos los proyectos web que he hecho junto con frameworks que utilizan de base a este (Bootstrap y aprendiendo Tailwindcss)",
+        "mysqlArt":"Sistema gestor de base de datos relacional.Es la base del proyecto llamado 'PetHero'. Este sistema permite almacenar,organizar y recuperar datos tambien su tratado en terminos de rendimiento,seguridad y flexibilidad por ende posibilita el manejo de grande volumenes de los mismos de forma prolija. ",
+        "gitArt":"Software de versionado utilizado en practicamente todos mis proyectos (para llevar un registro de versiones del codigo).Muy eficiente para seguimiento de los archivos (modificaciones,agregacion,borrado) involucrados en el trabajo."
+    },
+    "summarySection":{
+        "aboutme":"Sobre mí",
+        "mySum":"Mi nombre es Nicolás. Apasionado por la programación y tecnología. <br>Recibido como programador en la Universidad Tecnologica Nacional de <br>Mar del Plata donde aprendí fundamentos y principios para desarrollarme en<br>el area de la programación.<br>En el transcurso del mismo estudié lenguajes como C,Java,PHP,tambien uso y<br>manejo de base de datos asimismo un acercamiento a la metodologia estandardel desarrollo de un proyecto. Comprender el rol de programador como <br>analista y solucionador de problemas asi como la busqueda en la <br>optimización de las soluciones.<br>Busco aprender y formarme como profesional en IT,mientras sigo<br>capacitandome y aprendiendo de forma autodidacta en temas que me resulten interesantes como ; Backend ,manejo de datos y seguridad informatica.",
+        "contactme":"Contactame",
+        "emailLabel":"Correo electronico :",
+        "fullnameLabel":"Nombre completo :",
+        "subjectLabel":"Asunto :",
+        "bodyLabel":"Mensaje :",
+        "submitForm":"Enviar mensaje",
+        "contactbutton":"Contacto",
+        "footertext":"Todos los derechos reservados 2024"
+        }
+
+}
