@@ -100,6 +100,7 @@
     }
 
     // Mostrar la primera página al cargar la página
+    
     showPage(currentPage);
     startInterval();
 
@@ -255,6 +256,7 @@ function buttonEffect(btn)
     /*||||||||||||||||||||||||||||||||||||||||||||||  MODAL  |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
     //Display & close modal
     document.addEventListener("DOMContentLoaded", function () {
+        selectfont("windowsreg");
         // Tu código aquí se ejecutará una vez que se haya cargado el documento
         let dispModal = document.querySelectorAll('.folder');
         dispModal.forEach(modalClicked => {
@@ -622,6 +624,7 @@ function buttonEffect(btn)
             contactForm.style.display = "flex";
             contactForm.style.alignItems = "center";
             contactForm.style.background = "var(--second-color)";
+
             
             // contactForm.style.height = "100%";
         } else if (contactForm.style.display === "flex") {
@@ -775,6 +778,7 @@ function buttonEffect(btn)
                     font.classList.add('active');
                     body.style.fontFamily = fontname;
                     selectedFont = fontname;
+                    contactButton.style.fontFamily = selectedFont;
                 }else{
                     font.classList.remove('active');
                 }   
@@ -788,6 +792,10 @@ function buttonEffect(btn)
             console.log("targetdataset");
             console.log(e.target.dataset.font);
             //Tuve que usar el contactButton acá pq NUNCA respondia al cambio de fuente
-            contactButton.style.fontFamily = selectedFont;
+            console.log("selectedfont");
+            console.log(selectedFont);
+
+            // contactButton.style.fontFamily = selectedFont;
+
         })
     });
