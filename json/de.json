@@ -6,6 +6,7 @@
     },
 
     "mainSection":{
+            "font":"Schriftart",
             "welcome":"Herzlich willkommen!",
             "projTag":"PROJEKTE",
             "name":"<strong>Name :</strong> Nicolás",

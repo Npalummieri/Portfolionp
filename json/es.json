@@ -6,7 +6,8 @@
     },
 
     "mainSection":{
-            "welcome":"Bienvenido visitante",
+            "font":"fuente",
+            "welcome":"¡Bienvenido visitante!",
             "projTag":"PROYECTOS",
             "name":"<strong>Nombre</strong> : Nicolás",
             "lastname":"<strong>Apellido : </strong>Palummieri",
@@ -44,7 +45,7 @@
     },
     "summarySection":{
         "aboutme":"Sobre mí",
-        "mySum":"Mi nombre es Nicolás. Apasionado por la programación y tecnología. <br>Recibido como programador en la Universidad Tecnologica Nacional de <br>Mar del Plata donde aprendí fundamentos y principios para desarrollarme en<br>el area de la programación.<br>En el transcurso del mismo estudié lenguajes como C,Java,PHP,tambien uso y<br>manejo de base de datos asimismo un acercamiento a la metodologia estandardel desarrollo de un proyecto. Comprender el rol de programador como <br>analista y solucionador de problemas asi como la busqueda en la <br>optimización de las soluciones.<br>Busco aprender y formarme como profesional en IT,mientras sigo<br>capacitandome y aprendiendo de forma autodidacta en temas que me resulten interesantes como ; Backend ,manejo de datos y seguridad informatica.",
+        "mySum":"Mi nombre es Nicolás. Apasionado por la programación y tecnología. <br>Recibido como programador en la Universidad Tecnologica Nacional de <br>Mar del Plata donde aprendí fundamentos y principios para desarrollarme en<br>el area de la programación.<br>En el transcurso del mismo estudié lenguajes como C,Java,PHP,tambien uso y<br>manejo de base de datos asimismo un acercamiento a la metodologia estandardel desarrollo de un proyecto. Comprender el rol de programador como <br>analista y solucionador de problemas asi como la busqueda en la <br>optimización de las soluciones.<br>Busco aprender y formarme como profesional en IT,mientras sigo<br>capacitandome y aprendiendo de forma autodidacta en temas que me resultan interesantes como ; Backend ,manejo de datos y seguridad informatica.",
         "contactme":"Contactame",
         "emailLabel":"Correo electronico :",
         "fullnameLabel":"Nombre completo :",
