@@ -758,7 +758,6 @@ span.typing {
     width: 100%;
     height: 10%;
     font-size: 4em;
-    overflow: auto;
 }
 
 
@@ -1172,6 +1171,7 @@ ul #gallery{
       margin: 0 auto;
       background-color: var(--second-color);
       height: auto;
+      overflow: auto;
   }
 
   .contactForm form {
@@ -1267,6 +1267,11 @@ ul #gallery{
 
   .contactSection {
       width: 100%;
+  }
+
+  #responseMsg{
+    align-self: center;
+    justify-self: center;
   }
 /*||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
 

@@ -293,7 +293,7 @@
     <div class="currentList">
         <div class="itemList">
             <div class="box-icon" id="php">
-                <div class="iconlink"><img src="../Resources/imgs/logopixelphp.png" alt="php" class="icon-img"></a><p>PHP</p>
+                <div class="iconlink"><img src="Resources/imgs/logopixelphp.png" alt="php" class="icon-img"></a><p>PHP</p>
                 </div>
             </div>
             <div class="card" id="phpInfo">
@@ -306,7 +306,7 @@
         </div>
         <div class="itemList">
             <div class="box-icon" id="java">
-                <div class="iconlink"><img src="../Resources/imgs/logopixeljava2.png" alt="java" class="icon-img"><p>JAVA</p></div>
+                <div class="iconlink"><img src="Resources/imgs/logopixeljava2.png" alt="java" class="icon-img"><p>JAVA</p></div>
             </div>
             <div class="card" id="javaInfo">
                 <article id="javaArt" data-section="resourcesSection" data-value="javaArt">Lenguaje de programación
@@ -318,7 +318,7 @@
 
         <div class="itemList">
             <div class="box-icon" id="c">
-                <div class="iconlink"><img src="../Resources/imgs/iconpixelc.png" alt="c" class="icon-img"><p>C</p></div>
+                <div class="iconlink"><img src="Resources/imgs/iconpixelc.png" alt="c" class="icon-img"><p>C</p></div>
             </div>
             <div class="card" id="cInfo">
                 <article id="cArt" data-section="resourcesSection" data-value="cArt">Lenguaje de programación
@@ -331,7 +331,7 @@
 
         <div class="itemList">
             <div class="box-icon" id="js">
-                <div class="iconlink"><img src="../Resources/imgs/logopixeljs.png" alt="js" class="icon-img"><p>JavaScript</p></div>
+                <div class="iconlink"><img src="Resources/imgs/logopixeljs.png" alt="js" class="icon-img"><p>JavaScript</p></div>
             </div>
             <div class="card" id="jsInfo">
                 <article id="jsArt" data-section="resourcesSection" data-value="jsArt">Lenguaje de programación
@@ -346,7 +346,7 @@
 
         <div class="itemList">
             <div class="box-icon" id="html">
-                <div class="iconlink"><img src="../Resources/imgs/logopixelhtml.png" alt="html"
+                <div class="iconlink"><img src="Resources/imgs/logopixelhtml.png" alt="html"
                         class="icon-img"><p>HTML</p></div>
             </div>
             <div class="card" id="htmlInfo">
@@ -361,7 +361,7 @@
 
         <div class="itemList">
             <div class="box-icon" id="css">
-                <div class="iconlink"><img src="../Resources/imgs/logopixelcss.png" alt="css"
+                <div class="iconlink"><img src="Resources/imgs/logopixelcss.png" alt="css"
                         class="icon-img"><p>CSS</p></div>
             </div>
             <div class="card" id="cssInfo">
@@ -375,7 +375,7 @@
 
         <div class="itemList">
             <div class="box-icon" id="mysql">
-                <div class="iconlink"><img src="../Resources/imgs/logopixelsql.png"
+                <div class="iconlink"><img src="Resources/imgs/logopixelsql.png"
                         alt="mysql" class="icon-img"><p>MySQL</p></div>
             </div>
             <div class="card" id="mysqlInfo">
@@ -391,7 +391,7 @@
         
         <div class="itemList">
             <div class="box-icon" id="git">
-                <div class="iconlink"><img src="../Resources/imgs/logopixelgit.png" alt="git" class="icon-img">
+                <div class="iconlink"><img src="Resources/imgs/logopixelgit.png" alt="git" class="icon-img">
                     <p>GIT</p>
                 </div>
             </div>
@@ -450,26 +450,26 @@ Mi nombre es Nicolás.Apasionado por la programación y tecnología.Recibido com
                 <div class="content">
                     <div class="contactSection">
                         <div class="contactForm">
-                            <form action="https://api.web3forms.com/submit" method="POST">
+                            <form action="https://api.web3forms.com/submit" method="POST" id="formcontact">
                                 <input type="hidden" name="access_key" value="a0e88ce3-6a4e-4fee-946b-fb4d4ac1f22f">
                                 <div class="contactdiv">
                                     <label for="email" id="emailLabel" data-section="summarySection" data-value="emailLabel"
-                                        required>Email
+                                        >Email
                                         : </label>
-                                    <input type="email" name="email" id="email">
+                                    <input type="email" name="email" id="email"required>
                                 </div>
             
                                 <div class="contactdiv">
                                     <label for="number" id="numberLabel" data-section="summarySection"
                                         data-value="numberLabel">Telefono :
                                     </label>
-                                    <input type="number" name="number" id="number">
+                                    <input type="number" name="number" id="number" required>
                                 </div>
             
                                 <div class="contactdiv">
                                     <label for="fullname" id="fullnameLabel" data-section="summarySection"
-                                        data-value="fullnameLabel" required>Nombre completo : </label>
-                                    <input type="text" name="fullname" id="fullname">
+                                        data-value="fullnameLabel" >Nombre completo : </label>
+                                    <input type="text" name="fullname" id="fullname" required>
             
                                 </div>
             
@@ -477,17 +477,19 @@ Mi nombre es Nicolás.Apasionado por la programación y tecnología.Recibido com
                                     <label for="subject" id="subjectLabel" data-section="summarySection"
                                         data-value="subjectLabel">Asunto :
                                     </label>
-                                    <input type="text" name="subject" id="subject">
+                                    <input type="text" name="subject" id="subject" required>
                                 </div>
                                 <div class="contactdiv">
                                     <label for="body" id="bodyLabel" data-section="summarySection" data-value="bodyLabel"
-                                        required>Mensaje:
+                                        >Mensaje:
                                     </label>
-                                    <textarea type="text" name="body" id="body" cols="10" rows="20"></textarea>
+                                    <textarea type="text" name="body" id="body" cols="10" rows="20" required></textarea>
                                 </div>
                                 <button type="submit" id="submitForm" title="enviar mensaje" data-section="summarySection"
                                     data-value="submitForm">Enviar</button>
-                            </form>
+                                    <div id="responseMsg"></div>
+                                    </form>
+                                
                         </div>
                     </div>
                 </div>

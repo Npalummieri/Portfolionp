@@ -443,7 +443,7 @@
         languageOptions.forEach(function (option) {
             if (option.id === language) {
                 option.classList.add("active");
-                loadSumm(0);
+                // loadSumm();
             } else {
                 option.classList.remove("active");
             }
@@ -469,6 +469,7 @@
     languageOptions.forEach(langu => {
         langu.addEventListener('click', (e) => {
             changeLang(e.target.dataset.language);
+            // loadSumm();
         })
     });
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -597,14 +598,40 @@
 
 
     ///Limpiar inputs email post envio
-    document.getElementById('submitForm').addEventListener('click', function (event) {
-        event.preventDefault();
-        document.querySelector('#email').value = ''; // Limpia los campos
-        document.querySelector('#number').value = '';
-        document.querySelector('#fullname').value = '';
-        document.querySelector('#subject').value = '';
-        document.querySelector('#body').value = '';
-    });
+    
+
+    const formContact = document.getElementById("formcontact");
+    formContact.addEventListener("submit",async (event) =>{
+        event.preventDefault(); //Evitar recargo con info al lanzar evento  + anterior sumado a la func de arriba
+        const formData = new FormData(formContact);
+        const rspMessage = document.getElementById("responseMsg");
+        
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            console.log("response")
+            console.log(response);
+
+            const result = await response.json();
+
+            if (response.ok) {
+                rspMessage.textContent = 'Email sent successfully!';
+                rspMessage.style.color = 'green';
+            } else {
+                rspMessage.textContent = `Error: ${result.message || 'Email could not be sent'}`;
+                rspMessage.style.color = 'red';
+            }
+            formContact.reset();
+        } catch (error) {
+            rspMessage.textContent = `Error: ${result.message || 'Unexpected error.Email could not be sent'}`;
+            rspMessage.style.color = 'red';
+        }
+        });
+
+        
+    
 
     //// // // // // // // // // // // // // // // // // // // // // // // // // // // Color theme
     document.addEventListener('DOMContentLoaded', function () {
