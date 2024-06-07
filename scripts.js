@@ -44,7 +44,7 @@
             let boxIconItem = item.querySelector('.box-icon');
             let card = item.querySelector('.card');
             let art = item.querySelector('[id*="Art"]');
-            if (window.matchMedia("(min-width: 601px)").matches) {
+            if (window.matchMedia("(min-width: 1024px)").matches) {
                 boxIconItem.addEventListener('mouseenter', function () {
                     clearInterval(intervalId); // Detener el temporizador al hacer enter/fakehover
                     boxIconItem.style.display = "none"
@@ -56,10 +56,9 @@
                     card.style.animationIterationCount = ""; // Cantidad de repeticiones
                     card.style.margin = "10px";
                     art.style.display = "flex";
-                    art.style.justifyContent = "center";
+                    art.style.justifyContent= "center";
                     art.style.alignItems = "center";
-
-
+                    art.style.padding ="20px";
                 });
 
                 card.addEventListener('mouseleave', function () {
@@ -169,7 +168,7 @@
         let textMySumm = mySummary.textContent;
         const charSpan = document.getElementById('charSpan');
         charSpan.style.hyphens = "auto";
-        if (window.matchMedia("(max-width: 600px)").matches) {
+        if (window.matchMedia("(max-width: 1024px)").matches) {
             charSpan.style.fontSize = "1em";
         } else {
             charSpan.style.fontSize = "2em";
@@ -206,7 +205,7 @@
     //Display & close modal
     document.addEventListener("DOMContentLoaded", function () {
         selectfont("windowsreg");
-        // Tu código aquí se ejecutará una vez que se haya cargado el documento
+        // una vez que se haya cargado el documento
         let dispModal = document.querySelectorAll('.folder');
         dispModal.forEach(modalClicked => {
             modalClicked.addEventListener('click', function (e) {
@@ -244,6 +243,7 @@
             modalSelected.style.display = "flex";
 
             document.body.style.overflow = "hidden"; // Deshabilitar el scroll del cuerpo
+
 
             //Botones de cada modal
             let closeBtn = modalSelected.querySelector('.close-button');
@@ -284,13 +284,14 @@
                     modalMain.style.height = "100%";
 
                     windowDiv.style.display = "block";
-                    windowDiv.style.height = "100%"
+                    windowDiv.style.height = "100%";
+                    windowDiv.style.width = "100%"
                     windowDiv.style.margin = "0 auto";
 
                     modalToMax.style.display = "block";
                     modalToMax.style.margin = "auto 0";
-                    modalToMax.style.width = "100%";
-                    modalToMax.style.height = "100%";
+                    modalToMax.style.width = "90%";
+                    modalToMax.style.height = "auto";
                     maxxed = 1;
                 } else {
                     divIcon.style.border = "2px solid black";
@@ -329,10 +330,21 @@
         let slideIndex = 0;
         let slides = lastNode.querySelectorAll(".slide");
         let commentSlides = lastNode.querySelectorAll('.commentSlide');
-
+        //Paginacion c/ modal
+        const pagination = lastNode.querySelector(".pagination");
+        console.log("pagination");
+        console.log(pagination);
+        const paginationPara = document.createElement("p");
+        paginationPara.style.display = "flex";
+        paginationPara.style.justifyContent = "center";
+        paginationPara.style.width = "50%" ;
+        paginationPara.style.height = "20px";
+        pagination.appendChild(paginationPara);
         function showSlides() {
-
-
+            
+            
+            paginationPara.innerText = ` `;
+            paginationPara.innerText = `${slideIndex === 0 ? '1' : slideIndex+1} / ${slides.length === 0 ? '1' : slides.length}`;
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
                 //Hay un problema de logica y es que asumimos que todos las slides tienen comentarios,y va a haber una mala conexion entre slide-comentario si no se tiene en cuenta eso
@@ -341,17 +353,23 @@
                 }
             }
 
-            slides[slideIndex].style.display = "flex";
-
-
-            slides[slideIndex].style.justifyContent = "center"
-            slides[slideIndex].style.alignItems = "center"
+            let slideShow = slides[slideIndex];
+            // .style.display = "flex";
+            lastNode.querySelector(".window").appendChild(slideShow);
+            
+            // slides[slideIndex].style.justifyContent = "center"
+            // slides[slideIndex].style.alignItems = "center"
+            slideShow.style.display = "flex"; 
+            slideShow.style.justifyContent = "center";         
+            slideShow.style.alignItems = "center";
             let idsComm = [];
             commentSlides.forEach(comm => {
                 idsComm.push(parseInt(comm.getAttribute('data-idcommSlide')));
             });
             if (idsComm.indexOf(slideIndex) != -1) {
                 commentSlides[idsComm.indexOf(slideIndex)].style.display = "block";
+                // commentSlides[idsComm.indexOf(slideIndex)].style.margin = "30px";
+
             }
 
         }
@@ -362,8 +380,12 @@
 
         lastNode.querySelector('.prev').addEventListener('click', function () {
             slideIndex--;
+            // paginationPara.innerText = " ";
+            // paginationPara.innerText = `${slideIndex+1} / ${slides.length}`;
             if (slideIndex < 0) {
                 slideIndex = slides.length - 1;
+                // paginationPara.innerText = " ";
+                // paginationPara.innerText = `${slideIndex+1} / ${slides.length-1}`;
             }
             showSlides();
         })
@@ -373,6 +395,8 @@
         lastNode.querySelector('.next').addEventListener('click', function () {
             buttonEffect(lastNode.querySelector('.next'));
             slideIndex++;
+            // paginationPara.innerText = " ";
+            // paginationPara.innerText = `${slideIndex+1} / ${slides.length}`;
             if (slideIndex >= slides.length) {
                 slideIndex = 0;
             }
@@ -513,67 +537,70 @@
         })
     });
 
-    let maxxed = 0;
-    let originalStyles = {};
+    // let maxxed = 0;
+    // let originalStyles = {};
 
-    maxButtonsWin.forEach(maxbtn => {
-        maxbtn.addEventListener('click', function () {
-            buttonEffect(maxbtn);
-            let modalMain = maxbtn.closest('.modal');
-            let modalToMax = maxbtn.closest('.modal-content');
-            let windowDiv = maxbtn.closest('.window');
+    // maxButtonsWin.forEach(maxbtn => {
+    //     maxbtn.addEventListener('click', function () {
+    //         buttonEffect(maxbtn);
+    //         let modalMain = maxbtn.closest('.modal');
+    //         let modalToMax = maxbtn.closest('.modal-content');
+    //         let windowDiv = maxbtn.closest('.window');
+            
+    //         if (maxxed === 0) {
+    //             // Guardar estilos originales solo si no están guardados
+    //             if (!originalStyles.width) {
+    //                 originalStyles = {
+    //                     width: windowDiv.style.width,
+    //                     height: windowDiv.style.height,
+    //                     margin: windowDiv.style.margin,
+    //                     displayModal: modalToMax.style.display,
+    //                     marginModal: modalToMax.style.margin,
+    //                     widthModal: modalToMax.style.width,
+    //                     heightModal: modalToMax.style.height
+                        
+    //                 };
+    //             }
+                
+    //         }
 
-            if (maxxed === 0) {
-                // Guardar estilos originales solo si no están guardados
-                if (!originalStyles.width) {
-                    originalStyles = {
-                        width: windowDiv.style.width,
-                        height: windowDiv.style.height,
-                        margin: windowDiv.style.margin,
-                        displayModal: modalToMax.style.display,
-                        marginModal: modalToMax.style.margin,
-                        widthModal: modalToMax.style.width,
-                        heightModal: modalToMax.style.height
-                    };
-                }
-            }
+    //         divIcon = maxbtn.querySelector('.maxfig');
+    //         if (maxxed === 0) {
+    //             divIcon.style.borderTop = "3px solid black";
+    //             divIcon.style.borderBottom = "1px solid black";
+    //             divIcon.style.borderRight = "1px solid black";
+    //             divIcon.style.borderLeft = "1px solid black";
 
-            divIcon = maxbtn.querySelector('.maxfig');
-            if (maxxed === 0) {
-                divIcon.style.borderTop = "3px solid black";
-                divIcon.style.borderBottom = "1px solid black";
-                divIcon.style.borderRight = "1px solid black";
-                divIcon.style.borderLeft = "1px solid black";
+    //             modalMain.style.display = "block";
+    //             modalMain.style.width = "100%";
+    //             modalMain.style.height = "100%";
 
-                modalMain.style.display = "block";
-                modalMain.style.width = "100%";
-                modalMain.style.height = "100%";
+    //             windowDiv.style.display = "block";
+    //             windowDiv.style.height = "auto";
+    //             windowDiv.style.width = "80%";
+    //             windowDiv.style.margin = "0 auto";
 
-                windowDiv.style.display = "block";
-                windowDiv.style.height = "100%"
-                windowDiv.style.margin = "0 auto";
-
-                modalToMax.style.display = "block";
-                modalToMax.style.margin = "auto 0";
-                modalToMax.style.width = "100%";
-                modalToMax.style.height = "100%";
-                maxxed = 1;
-            } else {
-                divIcon.style.border = "2px solid black";
+    //             modalToMax.style.display = "block";
+    //             modalToMax.style.margin = "auto 0";
+    //             modalToMax.style.width = "100%";
+    //             modalToMax.style.height = "100%";
+    //             maxxed = 1;
+    //         } else {
+    //             divIcon.style.border = "2px solid black";
 
 
-                windowDiv.style.height = originalStyles.height;
-                windowDiv.style.margin = originalStyles.margin;
+    //             windowDiv.style.height = originalStyles.height;
+    //             windowDiv.style.margin = originalStyles.margin;
 
-                modalToMax.style.display = originalStyles.displayModal;
-                modalToMax.style.margin = originalStyles.marginModal;
-                modalToMax.style.width = originalStyles.widthModal;
-                modalToMax.style.height = originalStyles.heightModal;
-                maxxed = 0;
-            }
-            console.log(maxxed);
-        })
-    });
+    //             modalToMax.style.display = originalStyles.displayModal;
+    //             modalToMax.style.margin = originalStyles.marginModal;
+    //             modalToMax.style.width = originalStyles.widthModal;
+    //             modalToMax.style.height = originalStyles.heightModal;
+    //             maxxed = 0;
+    //         }
+    //         console.log(maxxed);
+    //     })
+    // });
 
     document.addEventListener('DOMContentLoaded', function () {
         const boxIcones = document.querySelectorAll('.box-icon');
