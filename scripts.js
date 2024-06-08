@@ -238,14 +238,23 @@
         function showCurrentModal() {
             // Oculta todos los modals
             allModals.forEach(modal => modal.style.display = 'none');
-    
+            
             // Clona el modal seleccionado
             let modalSelected = allModals[curPage].cloneNode(true);
             document.querySelector('#cloned').appendChild(modalSelected);
             modalSelected.style.display = "flex";
     
             document.body.style.overflow = "hidden"; // Deshabilitar el scroll del cuerpo
-    
+            
+            modalSelected.addEventListener("click",(event) =>
+                {
+                    console.log("HOLIWI");
+                    if(event.target === modalSelected)
+                        {
+                            console.log("HOLAA");
+                            modalSelected.style.display = "none";
+                        }
+                })
             // Manejar botones del modal
             setupModalButtons(modalSelected);
     
@@ -254,6 +263,10 @@
     
             return modalSelected;
         }
+
+        
+
+       
     
         // Configura los botones de maximizar, minimizar y cerrar
         function setupModalButtons(modalSelected) {
