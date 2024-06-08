@@ -232,177 +232,150 @@
 
     function dispAndCloseModal(allModals) {
         let curPage = 0;
-
+        let slideIndex = 0;
+    
         // Maneja el clic en el botón "Anterior"
         function showCurrentModal() {
-            // Oculta todos los modals            
+            // Oculta todos los modals
             allModals.forEach(modal => modal.style.display = 'none');
-            // Muestra el modal de la página actual
+    
+            // Clona el modal seleccionado
             let modalSelected = allModals[curPage].cloneNode(true);
             document.querySelector('#cloned').appendChild(modalSelected);
             modalSelected.style.display = "flex";
-
+    
             document.body.style.overflow = "hidden"; // Deshabilitar el scroll del cuerpo
-
-
-            //Botones de cada modal
+    
+            // Manejar botones del modal
+            setupModalButtons(modalSelected);
+    
+            // Mostrar slides
+            setupSlides(modalSelected);
+    
+            return modalSelected;
+        }
+    
+        // Configura los botones de maximizar, minimizar y cerrar
+        function setupModalButtons(modalSelected) {
             let closeBtn = modalSelected.querySelector('.close-button');
             let minBtn = modalSelected.querySelector('.minimize-button');
             let maxbtn = modalSelected.querySelector('.maximize-button');
-            let modalMain = maxbtn.closest('.modal');
-            let modalToMax = maxbtn.closest('.modal-content');
             let windowDiv = maxbtn.closest('.window');
-
-            let maxxed = 0;
+            let modalToMax = maxbtn.closest('.modal-content');
+    
+            let maxxed = false;
             let originalStyles = {};
-            maxbtn.addEventListener('click', function () {
-                if (maxxed === 0) {
+    
+            maxbtn.addEventListener('click', () => {
+                if (!maxxed) {
                     // Guardar estilos originales solo si no están guardados
-                    if (!originalStyles.width) {
+                    if (!Object.keys(originalStyles).length) {
                         originalStyles = {
+                            displayWindow: windowDiv.style.display,
                             width: windowDiv.style.width,
                             height: windowDiv.style.height,
                             margin: windowDiv.style.margin,
+                            fontsize: windowDiv.style.fontSize,
                             displayModal: modalToMax.style.display,
                             marginModal: modalToMax.style.margin,
                             widthModal: modalToMax.style.width,
-                            heightModal: modalToMax.style.height
+                            heightModal: modalToMax.style.height,
+                            topPos: modalToMax.style.top
                         };
                     }
-                }
-
-
-                let divIcon = maxbtn.querySelector('.maxfig');
-                if (maxxed === 0) {
-                    divIcon.style.borderTop = "3px solid black";
-                    divIcon.style.borderBottom = "1px solid black";
-                    divIcon.style.borderRight = "1px solid black";
-                    divIcon.style.borderLeft = "1px solid black";
-
-                    modalMain.style.display = "block";
-                    modalMain.style.width = "100%";
-                    modalMain.style.height = "100%";
-
-                    windowDiv.style.display = "block";
-                    windowDiv.style.height = "100%";
-                    windowDiv.style.width = "100%"
-                    windowDiv.style.margin = "0 auto";
-
+    
+                    // Maximizar
+                    // windowDiv.style.display = "block";
+                    // windowDiv.style.height = "100%";
+                    // windowDiv.style.width = "100%";
+                    // windowDiv.style.margin = "0 auto";
+    
                     modalToMax.style.display = "block";
                     modalToMax.style.margin = "auto 0";
                     modalToMax.style.width = "90%";
-                    modalToMax.style.height = "auto";
-                    maxxed = 1;
+                    if(modalToMax.getAttribute("id") === "modal-content-project0")
+                        {
+                            // modalToMax.style.height = "90%";
+                            modalToMax.style.top = "60%";
+                            windowDiv.style.height = "100%";
+                            windowDiv.style.fontSize = "1.2em";
+                            }else{
+                            modalToMax.style.height = "100vh";
+                        }
+                    
+                    
+                    maxxed = true;
                 } else {
-                    divIcon.style.border = "2px solid black";
-
-
-                    windowDiv.style.height = originalStyles.height;
-                    windowDiv.style.margin = originalStyles.margin;
-
+                    // Restaurar
+                    // windowDiv.style.height = originalStyles.height;
+                    // windowDiv.style.margin = originalStyles.margin;
+                    // windowDiv.style.display = originalStyles.displayWindow;
+                    windowDiv.style.fontSize = originalStyles.fontSize;
                     modalToMax.style.display = originalStyles.displayModal;
                     modalToMax.style.margin = originalStyles.marginModal;
                     modalToMax.style.width = originalStyles.widthModal;
                     modalToMax.style.height = originalStyles.heightModal;
-                    maxxed = 0;
+                    modalToMax.style.top = originalStyles.topPos;
+                    maxxed = false;
                 }
             });
-            closeBtn.addEventListener('click', function () {
-                lastNode.remove();
-                curPage = 0;
-                document.body.style.overflow = "auto";
-            });
-            minBtn.addEventListener('click', function () {
-                lastNode.remove();
-                curPage = 0;
-                document.body.style.overflow = "auto";
-            });
-
-
-            return modalSelected;
+    
+            closeBtn.addEventListener('click', () => closeModal());
+            minBtn.addEventListener('click', () => closeModal());
         }
-
-        //Mostrar modal al click
-        let lastNode = showCurrentModal();
-
-
-        /////////////////////////////////// Slides carousel
-        let slideIndex = 0;
-        let slides = lastNode.querySelectorAll(".slide");
-        let commentSlides = lastNode.querySelectorAll('.commentSlide');
-        //Paginacion c/ modal
-        const pagination = lastNode.querySelector(".pagination");
-        console.log("pagination");
-        console.log(pagination);
-        const paginationPara = document.createElement("p");
-        paginationPara.style.display = "flex";
-        paginationPara.style.justifyContent = "center";
-        paginationPara.style.width = "50%" ;
-        paginationPara.style.height = "20px";
-        pagination.appendChild(paginationPara);
-        function showSlides() {
-            
-            
-            paginationPara.innerText = ` `;
-            paginationPara.innerText = `${slideIndex === 0 ? '1' : slideIndex+1} / ${slides.length === 0 ? '1' : slides.length}`;
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-                //Hay un problema de logica y es que asumimos que todos las slides tienen comentarios,y va a haber una mala conexion entre slide-comentario si no se tiene en cuenta eso
-                if (i < commentSlides.length) {
-                    commentSlides[i].style.display = "none";
-                }
-            }
-
-            let slideShow = slides[slideIndex];
-            // .style.display = "flex";
-            lastNode.querySelector(".window").appendChild(slideShow);
-            
-            // slides[slideIndex].style.justifyContent = "center"
-            // slides[slideIndex].style.alignItems = "center"
-            slideShow.style.display = "flex"; 
-            slideShow.style.justifyContent = "center";         
-            slideShow.style.alignItems = "center";
-            let idsComm = [];
-            commentSlides.forEach(comm => {
-                idsComm.push(parseInt(comm.getAttribute('data-idcommSlide')));
-            });
-            if (idsComm.indexOf(slideIndex) != -1) {
-                commentSlides[idsComm.indexOf(slideIndex)].style.display = "block";
-                // commentSlides[idsComm.indexOf(slideIndex)].style.margin = "30px";
-
-            }
-
+    
+        function closeModal() {
+            document.querySelector('#cloned').innerHTML = '';
+            curPage = 0;
+            document.body.style.overflow = "auto";
         }
-
-        showSlides(); // Muestra el primer slide al cargar el modal
-
-
-
-        lastNode.querySelector('.prev').addEventListener('click', function () {
-            slideIndex--;
-            // paginationPara.innerText = " ";
-            // paginationPara.innerText = `${slideIndex+1} / ${slides.length}`;
-            if (slideIndex < 0) {
-                slideIndex = slides.length - 1;
-                // paginationPara.innerText = " ";
-                // paginationPara.innerText = `${slideIndex+1} / ${slides.length-1}`;
+    
+        // Configura la lógica del carrusel
+        function setupSlides(modalSelected) {
+            let slides = modalSelected.querySelectorAll(".slide");
+            let commentSlides = modalSelected.querySelectorAll('.commentSlide');
+            const pagination = modalSelected.querySelector(".pagination");
+            const paginationPara = document.createElement("p");
+            paginationPara.className = 'pagination-para';
+            paginationPara.style.display = "flex";
+            paginationPara.style.justifyContent = "center";
+            paginationPara.style.width = "50%";
+            paginationPara.style.height = "20px";
+            pagination.appendChild(paginationPara);
+    
+            function updatePagination() {
+                paginationPara.innerText = `${slides.length === 0 ? '1' : slideIndex + 1} / ${slides.length === 0 ? '1' : slides.length}`;
             }
-            showSlides();
-        })
-
-
-
-        lastNode.querySelector('.next').addEventListener('click', function () {
-            buttonEffect(lastNode.querySelector('.next'));
-            slideIndex++;
-            // paginationPara.innerText = " ";
-            // paginationPara.innerText = `${slideIndex+1} / ${slides.length}`;
-            if (slideIndex >= slides.length) {
-                slideIndex = 0;
+    
+            function showSlides() {
+                slides.forEach((slide, i) => {
+                    slide.style.display = i === slideIndex ? "block" : "none";
+                    // slide.style.justifyContent = "center";
+                    // slide.style.alignItems = "center";
+                });
+    
+                commentSlides.forEach((commentSlide, i) => {
+                    commentSlide.style.display = i === slideIndex ? "block" : "none";
+                });
+    
+                updatePagination();
             }
-            showSlides();
-        })
-
+    
+            showSlides(); // Muestra el primer slide al cargar el modal
+    
+            modalSelected.querySelector('.prev').addEventListener('click', () => {
+                slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+                showSlides();
+            });
+    
+            modalSelected.querySelector('.next').addEventListener('click', () => {
+                slideIndex = (slideIndex + 1) % slides.length;
+                showSlides();
+            });
+        }
+    
+        // Inicializa y muestra el modal actual
+        showCurrentModal();
     }
 
     //Evitar comportamiento modal especificamente en el note
@@ -422,13 +395,12 @@
         let msgeWel = document.querySelector("#welcome");
 
 
-        // Calcula el ancho basado en el contenido del texto
         let textLength = msgeWel.textContent.length;
 
         // Ajusta el ancho del contenedor del texto basado en el contenido del span
         msgeWel.style.width = textLength + "ch";
 
-        // Establece la variable CSS para el número de pasos en la animación
+
         msgeWel.style.setProperty('--steps', textLength);
 
 
